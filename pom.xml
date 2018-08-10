@@ -32,9 +32,9 @@
 
 	<modules>
 		<module>admin-eureka</module>
-    <module>admin-server</module>
-    <module>admin-client</module>
-  </modules>
+		<module>admin-server</module>
+		<module>admin-client</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>
