@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: admin-eureka
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      serviceZone: http://localhost:1234/eureka/
+server:
+  port: 1234
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+
