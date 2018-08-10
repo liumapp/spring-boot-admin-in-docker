@@ -32,7 +32,8 @@
 
 	<modules>
 		<module>admin-eureka</module>
-	</modules>
+    <module>admin-server</module>
+  </modules>
 
 	<dependencyManagement>
 		<dependencies>
