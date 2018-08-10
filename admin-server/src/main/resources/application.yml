@@ -1,0 +1,46 @@
+server:
+  port: 8766
+spring:
+  application:
+    name: admin-server
+  security:
+    user:
+      name: "admin"
+      password: "admin"
+
+#  mail:
+#    host: your mail host
+#    username: your mail account username
+#    password: your mail account password
+#  boot:
+#    admin:
+#      notify:
+#        mail:
+#          to: # mail account to receive
+#          enabled: true
+#          from: # mail account to send
+
+
+eureka:
+  instance:
+      leaseRenewalIntervalInSeconds: 10
+      health-check-url-path: /actuator/health
+      prefer-ip-address: true
+      metadata-map:
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:1234}/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+
