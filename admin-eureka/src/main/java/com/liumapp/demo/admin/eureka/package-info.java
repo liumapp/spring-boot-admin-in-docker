@@ -1,1 +1,0 @@
-package com.liumapp.demo.admin.eureka;
