@@ -9,7 +9,7 @@ for more detail , plz read [document](http://codecentric.github.io/spring-boot-a
 
 ### 启动
 
-按照以下配置，您可以在五分钟之内完成环境的搭建，运行结果如下图所示
+按照以下配置，依次启动admin-eureka、admin-client、admin-server您可以在五分钟之内完成环境的搭建，运行结果如下图所示
 
 ![version1.0.jpg](https://github.com/liumapp/spring-boot-admin-in-docker/blob/master/pic/version1.0.jpg)
 
