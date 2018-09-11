@@ -1,23 +1,16 @@
+server:
+  port: 1234
+
 spring:
-  application:
-    name: admin-eureka
+  cloud:
+    client:
+      ipAddress: localhost
 eureka:
   instance:
     hostname: localhost
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      serviceZone: http://localhost:1234/eureka/
-server:
-  port: 1234
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
+      defaultZone: http://localhost:1234/eureka/
