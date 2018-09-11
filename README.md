@@ -9,6 +9,10 @@ for more detail , plz read [document](http://codecentric.github.io/spring-boot-a
 
 ### 搭建
 
+按照以下配置，您可以在五分钟之内完成环境的搭建，运行结果如下图所示
+
+
+
 #### Eureka
 
 首先要把Eureka跑起来，然后让其他的服务：client和server注册到Eureka上
