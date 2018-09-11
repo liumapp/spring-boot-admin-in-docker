@@ -3,24 +3,6 @@ server:
 spring:
   application:
     name: admin-server
-  security:
-    user:
-      name: "admin"
-      password: "admin"
-
-#  mail:
-#    host: your mail host
-#    username: your mail account username
-#    password: your mail account password
-#  boot:
-#    admin:
-#      notify:
-#        mail:
-#          to: # mail account to receive
-#          enabled: true
-#          from: # mail account to send
-
-
 eureka:
   instance:
       leaseRenewalIntervalInSeconds: 10
