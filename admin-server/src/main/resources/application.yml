@@ -3,4 +3,11 @@ server:
 spring:
   application:
     name: admin-server
+  cloud:
+    client:
+      ipAddress: localhost
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1234/eureka/
