@@ -55,7 +55,9 @@ Deploying a service cluster managed by spring boot admin in docker
 
 ![1.jpg](https://github.com/liumapp/spring-boot-admin-in-docker/blob/master/pic/version2.1-1.jpg)
 
+您也可以通过Docker的容器工具：kitmatic来查看容器的运行状态：
 
+![2.jpg](https://github.com/liumapp/spring-boot-admin-in-docker/blob/master/pic/version2.1-2.jpg)
                         
 
 
