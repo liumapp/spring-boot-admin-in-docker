@@ -11,7 +11,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1234/eureka/
+      defaultZone: http://admin-eureka:1234/eureka/
 
 # docker环境下为容器内部路径
 logging:
