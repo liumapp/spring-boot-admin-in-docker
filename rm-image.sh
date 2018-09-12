@@ -17,3 +17,7 @@ docker rmi liumapp/admin-client:v2.1.0
 docker rmi liumapp/admin-server:v2.1.0
 
 docker rmi liumapp/admin-eureka:v2.1.0
+
+
+
+
