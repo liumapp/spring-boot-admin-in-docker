@@ -21,9 +21,9 @@ public class ScheduleLogGenerator {
 
     private static Logger LOGGER = LoggerFactory.getLogger(ScheduleLogGenerator.class);
 
-    @Scheduled(fixedRate = 5000 )
+    @Scheduled(fixedRate = 3000)
     public void reportLogTime () {
-        LOGGER.info(DateTool.getSimpleDateString(new Date()));
+        LOGGER.info(DateTool.getDateString(new Date(), "yyyy-MM-dd HH:mm:ss"));
     }
 
 }
