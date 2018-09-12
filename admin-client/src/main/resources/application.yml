@@ -13,8 +13,9 @@ eureka:
     service-url:
       defaultZone: http://localhost:1234/eureka/
 
+# docker环境下为容器内部路径
 logging:
-  file: /usr/local/tomcat/project/spring-boot-admin-in-docker/log/admin-client.log
+  file: /spring-boot-admin-in-docker/log/admin-client.log
   pattern:
     file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
 management:
