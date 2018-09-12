@@ -3,15 +3,12 @@ server:
 spring:
   application:
     name: admin-server
-  cloud:
-    client:
-      ipAddress: localhost
 
 eureka:
   client:
     registryFetchIntervalSeconds: 5
     service-url:
-      defaultZone: http://localhost:1234/eureka/
+      defaultZone: http://admin-eureka:1234/eureka/
   instance:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health

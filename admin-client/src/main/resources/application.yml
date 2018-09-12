@@ -4,9 +4,6 @@ server:
 spring:
   application:
     name: admin-client
-  cloud:
-    client:
-      ipAddress: localhost
 
 eureka:
   client:
