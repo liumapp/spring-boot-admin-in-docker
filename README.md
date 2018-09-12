@@ -43,6 +43,14 @@ Deploying a service cluster managed by spring boot admin in docker
 
 访问浏览器的 http://localhost:8766/ ，在点击admin-client进入详情页，我们可以发现所有的配置信息包括日志信息将会罗列出来
 
+详情页：
+
+![1.jpg](https://github.com/liumapp/spring-boot-admin-in-docker/blob/master/pic/version1.0.1-1.jpg)
+
+日志记录页面：
+
+![2.jpg](https://github.com/liumapp/spring-boot-admin-in-docker/blob/master/pic/version1.0.1-2.jpg)
+
 
 
 
