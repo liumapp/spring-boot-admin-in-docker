@@ -1,6 +1,8 @@
 server:
   port: 8766
 spring:
+  profiles:
+      active: dev
   application:
     name: admin-server
   cloud:
@@ -17,8 +19,6 @@ spring:
 eureka:
   client:
     registryFetchIntervalSeconds: 5
-    service-url:
-      defaultZone: http://admin-eureka:1234/eureka/
   instance:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
@@ -34,3 +34,25 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+---
+# dev环境
+spring:
+  profiles: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1234/eureka/
+
+
+---
+# docker环境
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin-eureka:1234/eureka/
+

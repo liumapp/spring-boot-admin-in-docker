@@ -2,6 +2,8 @@ server:
   port: 7373
 
 spring:
+  profiles:
+      active: dev
   application:
     name: admin-client
 
@@ -10,9 +12,6 @@ eureka:
     metadata-map:
       user.name: "admin"
       user.password: "adminadmin"
-  client:
-    service-url:
-      defaultZone: http://admin-eureka:1234/eureka/
 
 # docker环境下为容器内部路径
 logging:
@@ -26,3 +25,22 @@ management:
       exposure:
         include: "*"
 
+---
+# dev环境
+spring:
+  profiles: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1234/eureka/
+
+---
+# docker环境
+spring:
+  profiles: docker
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin-eureka:1234/eureka/
