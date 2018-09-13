@@ -5,9 +5,6 @@ spring:
       active: dev
   application:
     name: admin-server
-  cloud:
-    client:
-      ipAddress: localhost
   security:
     user:
       name: "admin"
