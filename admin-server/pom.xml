@@ -4,12 +4,12 @@
   <parent>
     <artifactId>spring-boot-admin-in-docker</artifactId>
     <groupId>com.liumapp.demo.admin</groupId>
-    <version>v1.2.0</version>
+    <version>v1.3.0</version>
   </parent>
 
   <groupId>com.liumapp.demo.admin.server</groupId>
   <artifactId>admin-server</artifactId>
-  <version>v1.2.0</version>
+  <version>v1.3.0</version>
   <packaging>jar</packaging>
 
   <developers>

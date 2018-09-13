@@ -19,9 +19,9 @@ Deploying a service cluster managed by spring boot admin in docker
 
 首先请clone项目到本地
 
-随后使用git命令切换到v1.2.0的tag
+随后使用git命令切换到v1.3.0的tag
 
-    git checkout v1.2.0
+    git checkout v1.3.0
     
 在这个版本下，我们基于v1.0.0的版本，对admin-client进行了一些配置上的改动：
     
