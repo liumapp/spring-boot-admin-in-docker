@@ -9,6 +9,11 @@ spring:
       ipAddress: localhost
 
 eureka:
+  instance:
+    metadata-map:
+      user.name: "admin"
+      user.password: "adminadmin"
+
   client:
     service-url:
       defaultZone: http://localhost:1234/eureka/
@@ -17,6 +22,7 @@ logging:
   file: /usr/local/tomcat/project/spring-boot-admin-in-docker/log/admin-client.log
   pattern:
     file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+
 management:
   endpoints:
     web:
