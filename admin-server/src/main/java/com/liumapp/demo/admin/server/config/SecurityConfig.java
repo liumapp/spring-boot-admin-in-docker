@@ -1,6 +1,7 @@
 package com.liumapp.demo.admin.server.config;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -19,6 +20,11 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final String adminContextPath;
+
+    @Bean
+    public AdminServerProperties adminServerProperties () {
+        return new AdminServerProperties();
+    }
 
     public SecurityConfig(AdminServerProperties adminServerProperties) {
         this.adminContextPath = adminServerProperties.getContextPath();
@@ -42,8 +48,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 .ignoringAntMatchers(
-                        "/instances",
-                        "/actuator/**"
+                        adminContextPath + "/instances",
+                        adminContextPath + "/actuator/**"
                 );
         // @formatter:on
     }

@@ -31,5 +31,3 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-
-info.tags.security: secured
