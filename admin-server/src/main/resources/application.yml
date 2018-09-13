@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: admin-server
+  cloud:
+    client:
+      ipAddress: localhost
+  security:
+    user:
+      name: "admin"
+      password: "adminadmin"
 
 eureka:
   client:
@@ -12,6 +19,9 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
+    metadata-map:
+      user.name: "admin"
+      user.password: "adminadmin"
 
 management:
   endpoints:
