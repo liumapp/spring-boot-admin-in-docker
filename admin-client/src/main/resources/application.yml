@@ -13,7 +13,6 @@ eureka:
     metadata-map:
       user.name: "admin"
       user.password: "adminadmin"
-
   client:
     service-url:
       defaultZone: http://localhost:1234/eureka/
