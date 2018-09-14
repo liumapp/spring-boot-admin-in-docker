@@ -2,7 +2,7 @@ version: '2'
 
 services:
   admin-client:
-    image: liumapp/admin-client:v2.2.0
+    image: liumapp/admin-client:v2.2.6
     restart: always
     container_name: admin-client
     hostname: admin-client
@@ -11,7 +11,7 @@ services:
     volumes:
       - ./log/:/spring-boot-admin-in-docker/log/
   admin-server:
-    image: liumapp/admin-server:v2.2.0
+    image: liumapp/admin-server:v2.2.6
     restart: always
     container_name: admin-server
     hostname: admin-server
@@ -20,7 +20,7 @@ services:
     volumes:
       - ./log/:/spring-boot-admin-in-docker/log/
   admin-eureka:
-    image: liumapp/admin-eureka:v2.2.0
+    image: liumapp/admin-eureka:v2.2.6
     restart: always
     hostname: admin-eureka
     container_name: admin-eureka
