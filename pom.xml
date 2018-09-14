@@ -10,7 +10,7 @@
 
 	<groupId>com.liumapp.demo.admin</groupId>
 	<artifactId>spring-boot-admin-in-docker</artifactId>
-	<version>v3.1.0</version>
+	<version>v4.1.0</version>
 	<packaging>pom</packaging>
 
 	<properties>
