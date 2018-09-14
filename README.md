@@ -23,9 +23,9 @@ Deploying a service cluster managed by spring boot admin in docker
 
 接下来我们利用docker-compose将admin-client、admin-server以及admin-eureka部署到docker环境下面运行
 
-首先请各位利用git命令，将项目代码切换到v2.1.0版本
+首先请各位利用git命令，将项目代码切换到v4.1.0版本
 
-    git checkout v2.1.0
+    git checkout v4.1.0
     
 版本切换后，项目目录下面会多出三个文件：build-image.sh、rm-image.sh和docker-compose.yml
 
