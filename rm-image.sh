@@ -12,11 +12,11 @@ echo '$                                                           $'
 echo '============================================================='
 echo '.'
 
-docker rmi liumapp/admin-client:v4.3.0
+docker rmi liumapp/admin-client:v4.1.0
 
-docker rmi liumapp/admin-server:v4.3.0
+docker rmi liumapp/admin-server:v4.1.0
 
-docker rmi liumapp/admin-eureka:v4.3.0
+docker rmi liumapp/admin-eureka:v4.1.0
 
 
 
