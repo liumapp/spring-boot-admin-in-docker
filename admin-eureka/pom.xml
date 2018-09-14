@@ -5,12 +5,12 @@
   <parent>
     <artifactId>spring-boot-admin-in-docker</artifactId>
     <groupId>com.liumapp.demo.admin</groupId>
-    <version>v2.1.0</version>
+    <version>v2.2.0</version>
   </parent>
 
   <groupId>com.liumapp.demo.admin.eureka</groupId>
   <artifactId>admin-eureka</artifactId>
-  <version>v2.1.0</version>
+  <version>v2.2.0</version>
   <packaging>jar</packaging>
 
   <developers>
