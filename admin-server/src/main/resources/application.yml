@@ -9,9 +9,6 @@ spring:
     user:
       name: "admin"
       password: "adminadmin"
-#  boot:
-#    admin:
-#      api-path: instances
 
 eureka:
   client:
