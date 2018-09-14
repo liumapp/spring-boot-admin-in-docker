@@ -2,7 +2,7 @@ server:
   port: 8766
 spring:
   profiles:
-      active: dev
+      active: docker
   application:
     name: admin-server
   security:
