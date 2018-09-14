@@ -14,6 +14,3 @@ Basic maven archetype for util project .
         
         mvn install 
 
-i'm xy and zl , we write hello world here . 
-
-i'm guo hui and wei dong and han sheng , we write hello world here . 
