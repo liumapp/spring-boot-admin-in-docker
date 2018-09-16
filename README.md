@@ -21,9 +21,9 @@ Deploying a service cluster managed by spring boot admin in docker
 
 详细操作请点击[这里](https://github.com/liumapp/spring-boot-admin-in-docker/wiki/1.3-%E9%85%8D%E7%BD%AESpring-Security)
 
-首先请将项目切换到v1.3.0版本
+首先请将项目切换到v1.4.0版本
 
-    git checkout v1.3.0
+    git checkout v1.4.0
     
 在之前的版本中，我们并没有引入spring security
 
