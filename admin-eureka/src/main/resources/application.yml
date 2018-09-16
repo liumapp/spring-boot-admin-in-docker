@@ -5,6 +5,13 @@ spring:
   cloud:
     client:
       ipAddress: localhost
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: adminadmin
+
 eureka:
   instance:
     hostname: localhost
@@ -14,3 +21,4 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://localhost:1234/eureka/
+
