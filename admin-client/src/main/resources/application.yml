@@ -15,7 +15,7 @@ eureka:
       user.password: "adminadmin"
   client:
     service-url:
-      defaultZone: http://admin:adminadmin@localhost:1234/eureka/
+      defaultZone: http://user:password@localhost:1234/eureka/
 
 logging:
   file: /usr/local/tomcat/project/spring-boot-admin-in-docker/log/admin-client.log
