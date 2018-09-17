@@ -29,9 +29,79 @@ Deploying a service cluster managed by spring boot admin in docker
 
     git checkout v1.4.0
     
+首先配置Eureka的Spring security
+
+在admin-eureka模块中添加以下maven依赖：
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>    
+
+然后对admin-eureka的application.yml做如下修改：
     
+    spring:
+      security:
+        user:
+          name: admin
+          password: adminadmin
     
+    eureka:
+        service-url:
+          defaultZone: http://admin:adminadmin@localhost:1234/eureka/
+
+对admin-eureka的启动类做如下修改：
     
+    @SpringBootApplication
+    @EnableEurekaServer
+    public class AdminEurekaMain {
+    
+        public static void main (String[] args) {
+            SpringApplication.run(AdminEurekaMain.class, args);
+        }
+    
+        @Configuration
+        @EnableWebSecurity
+        public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    
+            @Value("${spring.security.user.name}")
+            private String username;
+    
+            @Value("${spring.security.user.password}")
+            private String password;
+    
+            @Override
+            protected void configure(HttpSecurity http) throws Exception {
+                http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER);
+                http.csrf().disable();
+                //注意：为了可以使用 http://${user}:${password}@${host}:${port}/eureka/ 这种方式登录,所以必须是httpBasic,如果是form方式,不能使用url格式登录
+                http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
+            }
+    
+            @Autowired
+            public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+                auth
+                        .inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance())
+                        //admin
+                        .withUser(username).password(password).roles("EUREKA-CLIENT").and()
+                        //eureka-security-client
+                        .withUser("eureka-security-client").password("eureka-security-client").roles("EUREKA-CLIENT")
+                ;
+            }
+        }
+    
+    }
+        
+接下来配置eureka的客户端：admin-client及admin-server
+
+只需要修改他们的配置文件即可：
+
+    eureka:
+      client:
+        service-url:
+          defaultZone: http://admin:adminadmin@localhost:1234/eureka/        
+        
+结束        
 
 
 
