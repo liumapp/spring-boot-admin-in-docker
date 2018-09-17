@@ -5,12 +5,12 @@
   <parent>
     <artifactId>spring-boot-admin-in-docker</artifactId>
     <groupId>com.liumapp.demo.admin</groupId>
-    <version>v4.1.0</version>
+    <version>v4.2.0</version>
   </parent>
 
   <groupId>com.liumapp.demo.admin.eureka</groupId>
   <artifactId>admin-eureka</artifactId>
-  <version>v4.1.0</version>
+  <version>v4.2.0</version>
   <packaging>jar</packaging>
 
   <developers>
@@ -33,6 +33,10 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
   </dependencies>
 

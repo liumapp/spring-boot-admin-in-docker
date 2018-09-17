@@ -1,6 +1,15 @@
 server:
   port: 1234
 
+spring:
+  cloud:
+    client:
+      ipAddress: localhost
+  security:
+    user:
+      name: admin
+      password: adminadmin
+
 eureka:
   instance:
     prefer-ip-address: false
@@ -8,4 +17,5 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:1234/eureka/
+      defaultZone: http://admin:adminadmin@localhost:1234/eureka/
+

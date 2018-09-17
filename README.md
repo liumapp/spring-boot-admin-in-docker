@@ -57,11 +57,3 @@ start admin-eureka first , then admin-server and admin-client
 open your browser and visit http://localhost:8766
 
 done.   
-
-
-
-
-
-
-
-                      
