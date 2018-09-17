@@ -33,10 +33,10 @@ public class AdminEurekaMain {
     @EnableWebSecurity
     public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-        @Value("${spring.security.name}")
+        @Value("${spring.security.user.name}")
         private String username;
 
-        @Value("${spring.security.password}")
+        @Value("${spring.security.user.password}")
         private String password;
 
         @Override
